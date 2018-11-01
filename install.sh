@@ -37,19 +37,19 @@ yum install -y dotnet-sdk-2.1
 
 #conda update conda
 
+# MariaDB
+touch /etc/yum.repos.d/MariaDB.repo
+echo "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.1/centos7-amd64\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
+
 # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
 # LAMP for Amazon Linux 2
 # amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
 # yum install -y httpd mariadb-server
 
-# MariaDB
-touch /etc/yum.repos.d/MariaDB.repo
-echo "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.1/centos7-amd64\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
-
 # Set startup for Apache HTTP Server
-systemctl start httpd
-systemctl enable httpd
-systemctl is-enabled httpd
+# systemctl start httpd
+# systemctl enable httpd
+# systemctl is-enabled httpd
 
 # Install zsh & oh-my-zsh
 yum install zsh
