@@ -1,4 +1,5 @@
 #!/bin/bash
+# bash script for launch_code required-software-install
 
 # NodeJS
 curl -sL https://rpm.nodesource.com/setup_11.x | sudo bash -
