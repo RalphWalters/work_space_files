@@ -1,6 +1,9 @@
 #!/bin/bash
 # bash script for launch_code required-software-install
 
+# User directory
+cd
+
 # NodeJS
 curl -sL https://rpm.nodesource.com/setup_11.x | sudo bash -
 yum install -y nodejs
@@ -23,24 +26,41 @@ yum install -y code
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 yum install -y dotnet-sdk-2.1
 
+# Python 3.7.0
+yum install gcc openssl-devel bzip2-devel
+cd /usr/src
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+tar xzf Python-3.7.0.tgz
+cd Python-3.7.0
+./configure --enable-optimizations
+make altinstall
+
+# User directory
+cd
+
 # Anaconda Python
 # Go to Download directory
 #cd ~/Downloads
-
 # You can change what anaconda version you want at 
 # https://repo.continuum.io/archive/
 #wget -c https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 #bash Anaconda3-5.3.0-Linux-x86_64.sh
 #echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
-
 # Refresh basically
 #source ~/.bashrc
-
 #conda update conda
 
 # MariaDB
 touch /etc/yum.repos.d/MariaDB.repo
 echo "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.1/centos7-amd64\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
+yum install MariaDB-server MariaDB-client -y
+systemctl start mariadb
+systemctl enable mariadb
+systemctl status mariadb
+# mysql_secure_installation
+# mysql -V
+# mysqld --print-defaults
+# mysql -u root -p
 
 # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
 # LAMP for Amazon Linux 2
@@ -52,6 +72,6 @@ echo "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.1/centos7-a
 # systemctl enable httpd
 # systemctl is-enabled httpd
 
-# Install zsh & oh-my-zsh
+# zsh & oh-my-zsh
 yum install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
