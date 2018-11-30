@@ -1,6 +1,6 @@
-Required software install for AWS & LaunchCodeEducation
+# Required software install for AWS & LaunchCodeEducation
 
-This should be done seperately...
+# This should be done seperately...
 # zsh & oh-my-zsh
 sudo yum install -y zsh
 zsh
