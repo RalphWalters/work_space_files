@@ -1,4 +1,5 @@
 # bash script for launch_code required-software-install
+STARTTIME=$((date +%s))
 
 # Change to user directory
 cd
@@ -52,3 +53,5 @@ sudo systemctl status mariadb
 sudo yum install -y zsh
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+ENDTIME=$(date +%s)
+echo "Script execution: $((($ENDTIME - $STARTTIME) / 60)) minutes"
