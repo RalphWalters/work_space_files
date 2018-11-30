@@ -14,8 +14,8 @@ fi
 cd Download
 
 # NodeJS LTS
-sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-sudo yum install -y nodejs
+# sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+# sudo yum install -y nodejs
 
 # Chromium
 sudo yum install -y epel-release
