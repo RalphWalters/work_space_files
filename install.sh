@@ -1,8 +1,7 @@
-#!/bin/bash
 # bash script for launch_code required-software-install
 
 # Change to user directory
-cd ~
+cd ~/
 
 # Make Download directory if not present. Change to Download directory
 if [ ! -d ~/Download ] 
@@ -50,7 +49,7 @@ systemctl status mariadb
 # mysql -u root -p
 
 # zsh & oh-my-zsh
-yum install zsh
+yum install -y zsh
 zsh -0
 exit
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
