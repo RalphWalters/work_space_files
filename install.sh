@@ -1,5 +1,5 @@
 # bash script for launch_code required-software-install
-STARTTIME=$((date +%s))
+STARTTIME=$((date +'%s'))
 
 # Change to user directory
 cd
@@ -49,7 +49,7 @@ sudo systemctl status mariadb
 # mysqld --print-defaults
 # mysql -u root -p
 
-ENDTIME=$(date +%s)
+ENDTIME=$(date +'%s')
 echo "Script execution: $((($ENDTIME - $STARTTIME) / 60)) minutes"
 
 # zsh & oh-my-zsh
