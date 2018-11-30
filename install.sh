@@ -34,7 +34,7 @@ yum install -y dotnet-sdk-2.1
 
 # Miniconda Python
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
 
 # MariaDB
 yum install -y mariadb-server
