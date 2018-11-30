@@ -50,6 +50,4 @@ sudo systemctl status mariadb
 
 # zsh & oh-my-zsh
 sudo yum install -y zsh
-zsh;
-exit;
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
