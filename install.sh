@@ -24,23 +24,23 @@ sudo yum install -y chromium
 
 # Microsoft Visual Studio Code
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo yum check-update
 sudo yum install -y code
 
 # Microsoft .NET SDK
-rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 sudo yum install -y dotnet-sdk-2.1
 
 # Miniconda Python
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-./Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
 
 # MariaDB
 sudo yum install -y mariadb-server
-systemctl start mariadb
-systemctl enable mariadb
-systemctl status mariadb
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo systemctl status mariadb
 
 # Setup MariaDB
 # mysql_secure_installation
@@ -50,6 +50,6 @@ systemctl status mariadb
 
 # zsh & oh-my-zsh
 sudo yum install -y zsh
-zsh
-exit
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+zsh;
+exit;
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
