@@ -3,6 +3,9 @@
 # Change to user directory
 cd
 
+# Update existing OS image
+sudo yum update -y
+
 # Make Download directory if not present. Change to Download directory
 if [ ! -d Download ] 
 then
