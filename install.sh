@@ -50,6 +50,10 @@ cd
 #source ~/.bashrc
 #conda update conda
 
+# Miniconda Python
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -y
+
 # MariaDB
 touch /etc/yum.repos.d/MariaDB.repo
 echo "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.1/centos7-amd64\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
