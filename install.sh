@@ -5,8 +5,8 @@
 cd
 
 # NodeJS
-curl -sL https://rpm.nodesource.com/setup_11.x | sudo bash -
-yum install -y nodejs
+# curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+# yum install -y nodejs
 
 # Chromium
 yum install -y epel-release
@@ -27,13 +27,13 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 yum install -y dotnet-sdk-2.1
 
 # Python 3.7.0
-yum install gcc openssl-devel bzip2-devel
-cd /usr/src
-wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
-tar xzf Python-3.7.0.tgz
-cd Python-3.7.0
-./configure --enable-optimizations
-make altinstall
+# yum install gcc openssl-devel bzip2-devel
+# cd /usr/src
+# wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+# tar xzf Python-3.7.0.tgz
+# cd Python-3.7.0
+# ./configure --enable-optimizations
+# make altinstall
 
 # User directory
 cd
@@ -55,9 +55,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -y
 
 # MariaDB
-touch /etc/yum.repos.d/MariaDB.repo
-echo "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.1/centos7-amd64\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
-yum install MariaDB-server MariaDB-client -y
+yum install mariadb-server
 systemctl start mariadb
 systemctl enable mariadb
 systemctl status mariadb
