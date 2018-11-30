@@ -49,9 +49,9 @@ sudo systemctl status mariadb
 # mysqld --print-defaults
 # mysql -u root -p
 
+ENDTIME=$(date +%s)
+echo "Script execution: $((($ENDTIME - $STARTTIME) / 60)) minutes"
+
 # zsh & oh-my-zsh
 sudo yum install -y zsh
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-ENDTIME=$(date +%s)
-echo "Script execution: $((($ENDTIME - $STARTTIME) / 60)) minutes"
