@@ -1,7 +1,7 @@
 # Required software install for AWS & LaunchCodeEducation
 
 # These should be done seperately...
-# zsh & oh-my-zsh
+# Install zsh
 sudo yum install -y zsh
 
 zsh
@@ -10,6 +10,7 @@ zsh
 
 exit
 
+# Install oh-my-zsh
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Add to the end of .zshrc
