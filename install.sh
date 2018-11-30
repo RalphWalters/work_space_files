@@ -2,14 +2,14 @@
 # bash script for launch_code required-software-install
 
 # Change to user directory
-cd
+cd ~
 
 # Make Download directory if not present. Change to Download directory
-if [ ! -d ./Download ] 
+if [ ! -d ~/Download ] 
 then
-    mkdir -p Download
+    mkdir -p ~/Download
 fi
-cd Download
+cd ~/Download
 
 # NodeJS LTS
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
@@ -38,7 +38,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 
 # MariaDB
-yum install mariadb-server
+yum install -y mariadb-server
 systemctl start mariadb
 systemctl enable mariadb
 systemctl status mariadb
@@ -52,4 +52,5 @@ systemctl status mariadb
 # zsh & oh-my-zsh
 yum install zsh
 zsh -0
+exit
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
