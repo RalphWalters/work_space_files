@@ -1,4 +1,5 @@
 # Required software install for AWS & LaunchCodeEducation
+./install.sh
 
 # These should be done seperately...
 # Install zsh
