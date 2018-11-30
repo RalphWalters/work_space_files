@@ -1,7 +1,7 @@
 # bash script for launch_code required-software-install
 
 # Change to user directory
-cd /home/.
+cd
 
 # Make Download directory if not present. Change to Download directory
 if [ ! -d Download ] 
