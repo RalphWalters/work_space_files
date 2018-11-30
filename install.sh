@@ -1,14 +1,14 @@
 # bash script for launch_code required-software-install
 
 # Change to user directory
-cd ~/
+cd /home/.
 
 # Make Download directory if not present. Change to Download directory
-if [ ! -d ~/Download ] 
+if [ ! -d Download ] 
 then
-    mkdir -p ~/Download
+    mkdir -p Download
 fi
-cd ~/Download
+cd Download
 
 # NodeJS LTS
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
