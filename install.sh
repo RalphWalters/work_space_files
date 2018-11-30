@@ -35,20 +35,17 @@ yum install -y dotnet-sdk-2.1
 # ./configure --enable-optimizations
 # make altinstall
 
-# User directory
-cd
-
 # Anaconda Python
 # Go to Download directory
-#cd ~/Downloads
+# cd ~/Downloads
 # You can change what anaconda version you want at 
 # https://repo.continuum.io/archive/
-#wget -c https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
-#bash Anaconda3-5.3.0-Linux-x86_64.sh
-#echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
+# wget -c https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
+# bash Anaconda3-5.3.0-Linux-x86_64.sh
+# echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
 # Refresh basically
-#source ~/.bashrc
-#conda update conda
+# source ~/.bashrc
+# conda update conda
 
 # Miniconda Python
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -76,4 +73,5 @@ systemctl status mariadb
 
 # zsh & oh-my-zsh
 yum install zsh
+zsh -0
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
