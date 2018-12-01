@@ -15,4 +15,4 @@ exit
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Add to the end of .zshrc
-export PATH="/home/vagrant/miniconda3/bin:$PATH"
+export PATH="/home/your-user-name/miniconda3/bin:$PATH"
