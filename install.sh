@@ -39,7 +39,7 @@ sudo yum install -y dotnet-sdk-2.1
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 
-# MariaDB
+# MariaDB RDBMS
 sudo yum install -y mariadb-server
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
