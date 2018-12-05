@@ -32,8 +32,9 @@ sudo yum check-update
 sudo yum install -y code
 
 # Microsoft .NET SDK
+# https://dotnet.microsoft.com/download/linux-package-manager/rhel/sdk-2.2.100
 sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
-sudo yum install -y dotnet-sdk-2.1
+sudo yum install -y dotnet-sdk-2.2
 
 # Miniconda Python
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
