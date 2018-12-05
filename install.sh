@@ -31,7 +31,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo yum check-update
 sudo yum install -y code
 
-# Microsoft .NET SDK
+# Microsoft .NET Core SDK 2.2
 # https://dotnet.microsoft.com/download/linux-package-manager/rhel/sdk-2.2.100
 sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 sudo yum install -y dotnet-sdk-2.2
